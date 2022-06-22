@@ -1,5 +1,5 @@
 {
-    "name": "adriangibbons/php-fit-file-analysis",
+    "name": "mmerlijn/php-fit-file-analysis",
     "type": "library",
     "description": "A PHP class for analysing FIT files created by Garmin GPS devices",
     "keywords": ["garmin", "fit"],
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "adriangibbons\\": "src/"
+            "mmerlijn\\": "src/"
         }
     }
 }
