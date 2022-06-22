@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-if(!class_exists('adriangibbons\phpFITFileAnalysis')) {
+if(!class_exists('mmerlijn\phpFITFileAnalysis')) {
     require __DIR__ . '/../src/phpFITFileAnalysis.php';
 }
 
@@ -13,7 +13,7 @@ class PowerTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->base_dir = __DIR__ . '/../demo/fit_files/';
-        $this->pFFA = new adriangibbons\phpFITFileAnalysis($this->base_dir . $this->filename, ['units' => 'raw']);
+        $this->pFFA = new mmerlijn\phpFITFileAnalysis($this->base_dir . $this->filename, ['units' => 'raw']);
     }
     
     public function testPower_criticalPower_values()
@@ -87,7 +87,7 @@ class PowerTest extends PHPUnit_Framework_TestCase
      */
     public function testPower_criticalPower_no_power()
     {
-        $pFFA = new adriangibbons\phpFITFileAnalysis($this->base_dir . 'road-cycling.fit');
+        $pFFA = new mmerlijn\phpFITFileAnalysis($this->base_dir . 'road-cycling.fit');
         
         $time_periods = [2,14400];
         $cps = $pFFA->criticalPower($time_periods);
@@ -98,7 +98,7 @@ class PowerTest extends PHPUnit_Framework_TestCase
      */
     public function testPower_powerMetrics_no_power()
     {
-        $pFFA = new adriangibbons\phpFITFileAnalysis($this->base_dir . 'road-cycling.fit');
+        $pFFA = new mmerlijn\phpFITFileAnalysis($this->base_dir . 'road-cycling.fit');
         
         $power_metrics = $pFFA->powerMetrics(350);
     }
@@ -108,7 +108,7 @@ class PowerTest extends PHPUnit_Framework_TestCase
      */
     public function testPower_powerHistogram_no_power()
     {
-        $pFFA = new adriangibbons\phpFITFileAnalysis($this->base_dir . 'road-cycling.fit');
+        $pFFA = new mmerlijn\phpFITFileAnalysis($this->base_dir . 'road-cycling.fit');
         
         $power_metrics = $pFFA->powerHistogram(100);
     }
@@ -126,7 +126,7 @@ class PowerTest extends PHPUnit_Framework_TestCase
      */
     public function testPower_power_partitioned_no_power()
     {
-        $pFFA = new adriangibbons\phpFITFileAnalysis($this->base_dir . 'road-cycling.fit');
+        $pFFA = new mmerlijn\phpFITFileAnalysis($this->base_dir . 'road-cycling.fit');
         
         $power_partioned = $pFFA->powerPartioned(350);
     }

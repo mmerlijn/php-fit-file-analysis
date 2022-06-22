@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-if(!class_exists('adriangibbons\phpFITFileAnalysis')) {
+if(!class_exists('mmerlijn\phpFITFileAnalysis')) {
     require __DIR__ . '/../src/phpFITFileAnalysis.php';
 }
 
@@ -29,7 +29,7 @@ class BasicTest extends PHPUnit_Framework_TestCase
      */
     public function testEmptyFilepath()
     {
-        $pFFA = new adriangibbons\phpFITFileAnalysis('');
+        $pFFA = new mmerlijn\phpFITFileAnalysis('');
     }
     
     /**
@@ -37,7 +37,7 @@ class BasicTest extends PHPUnit_Framework_TestCase
      */
     public function testFileDoesntExist()
     {
-        $pFFA = new adriangibbons\phpFITFileAnalysis('file_doesnt_exist.fit');
+        $pFFA = new mmerlijn\phpFITFileAnalysis('file_doesnt_exist.fit');
     }
     
     /**
@@ -46,7 +46,7 @@ class BasicTest extends PHPUnit_Framework_TestCase
     public function testInvalidFitFile()
     {
         $file_path = $this->base_dir . '../composer.json';
-        $pFFA = new adriangibbons\phpFITFileAnalysis($file_path);
+        $pFFA = new mmerlijn\phpFITFileAnalysis($file_path);
     }
     
     
@@ -54,7 +54,7 @@ class BasicTest extends PHPUnit_Framework_TestCase
     {
         foreach($this->demo_files as $filename) {
 
-            $pFFA = new adriangibbons\phpFITFileAnalysis($this->base_dir . $filename);
+            $pFFA = new mmerlijn\phpFITFileAnalysis($this->base_dir . $filename);
             
             $this->assertGreaterThan(0, $pFFA->data_mesgs['activity']['timestamp'], 'No Activity timestamp!');
 

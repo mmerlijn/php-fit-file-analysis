@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-if(!class_exists('adriangibbons\phpFITFileAnalysis')) {
+if(!class_exists('mmerlijn\phpFITFileAnalysis')) {
     require __DIR__ . '/../src/phpFITFileAnalysis.php';
 }
 
@@ -13,7 +13,7 @@ class GetJSONTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->base_dir = __DIR__ . '/../demo/fit_files/';
-        $this->pFFA = new adriangibbons\phpFITFileAnalysis($this->base_dir . $this->filename, ['units' => 'raw']);
+        $this->pFFA = new mmerlijn\phpFITFileAnalysis($this->base_dir . $this->filename, ['units' => 'raw']);
     }
     
     public function testGetJSON()
