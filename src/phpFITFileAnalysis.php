@@ -591,6 +591,7 @@ class phpFITFileAnalysis
             3112 => 'Edge 520 Plus',            // edge_520_plus
             3299 => 'hrm_dual',
             3314 => 'approach_s40',
+            4024 => 'Forerunner 955',
             10007 => 'SDM4 footpod',            // sdm4
             10014 => 'edge_remote',
             20119 => 'training_center',
